@@ -1,0 +1,15 @@
+{
+  "lspconfig": {
+    "pyright" : {
+      "python.analysis.typeCheckingMode": "basic",
+      "python.analysis.diagnosticSeverityOverrides": {
+        "reportUndefinedVariable": "warning",
+        "reportPrivateImportUsage": "warning",
+        "reportAttributeAccessIssue": "warning",
+        "reportInvalidTypeArguments": "warning",
+        "reportAbstractUsage": "warning",
+        "reportCallIssue": "warning"
+      }
+    }
+  }
+}
