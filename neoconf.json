@@ -1,6 +1,6 @@
 {
   "lspconfig": {
-    "pyright" : {
+    "pyright": {
       "python.analysis.typeCheckingMode": "basic",
       "python.analysis.diagnosticSeverityOverrides": {
         "reportUndefinedVariable": "warning",
@@ -9,6 +9,13 @@
         "reportInvalidTypeArguments": "warning",
         "reportAbstractUsage": "warning",
         "reportCallIssue": "warning"
+      }
+    },
+    "gopls": {
+      "completeUnimported": true,
+      "usePlaceholders": true,
+      "analyses": {
+        "unusedparams": true
       }
     }
   }
