@@ -10,6 +10,7 @@ return {
         "lua_ls",
         "pyright",
         "gopls",
+        "tsserver",
       })
     end,
   },
