@@ -2,6 +2,28 @@ return {
   -- You can also add new plugins here as well:
   -- Add plugins, the lazy syntax
   -- "andweeb/presence.nvim",
+
+  {
+    "AstroNvim/astrocore",
+    lazy = false, -- disable lazy loading
+    priority = 10000, -- load AstroCore first
+    opts = {
+      diagnostics = {
+        -- disable diagnostics virtual text
+        virtual_text = false,
+      },
+    }
+  },
+
+  {
+      "AstroNvim/astroui",
+      lazy = false, -- disable lazy loading
+      priority = 10000, -- load AstroUI first
+      opts = {
+        -- set configuration options  as described below
+      }
+  },
+
   "ValeryTychkin/xcode-dark.nvim",
 
   {
@@ -43,19 +65,19 @@ return {
   "nvimdev/zephyr-nvim",
 
   {
-    "AstroNvim/astrocore",
-    lazy = false, -- disable lazy loading
-    priority = 10000, -- load AstroCore first
-    opts = {
-        -- set configuration options  as described below
-    }
-  },
-
-  {
     "ray-x/lsp_signature.nvim",
     event = "BufRead",
     config = function()
       require("lsp_signature").setup()
     end,
   },
+
+  {
+    "stevanmilic/nvim-lspimport",
+    event = "VeryLazy",
+    config = function ()
+      vim.keymap.set("n", "<leader>a", require("lspimport").import, { noremap = true })
+    end
+  }
+  
 }
