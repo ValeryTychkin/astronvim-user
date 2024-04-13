@@ -5,7 +5,6 @@ if vim.g.neovide then
   vim.g.neovide_input_use_logo = 1
   vim.g.neovide_hide_mouse_when_typing = true
 
-  vim.keymap.set('n', '<D-s>', ':w<CR>')      -- Save
   vim.keymap.set('v', '<D-c>', '"+y')         -- Copy
   vim.keymap.set('n', '<D-v>', '"+P')         -- Paste normal mode
   vim.keymap.set('v', '<D-v>', '"+P')         -- Paste visual mode
@@ -13,10 +12,6 @@ if vim.g.neovide then
   vim.keymap.set('i', '<D-v>', '<ESC>l"+Pli') -- Paste insert mode
 end
 
-vim.api.nvim_set_keymap('', '<D-v>', '+p<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('!', '<D-v>', '<C-R>+', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('t', '<D-v>', '<C-R>+', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('v', '<D-v>', '<C-R>+', { noremap = true, silent = true })
 
 return {
   -- Configure AstroNvim updates
