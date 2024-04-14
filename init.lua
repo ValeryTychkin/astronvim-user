@@ -12,6 +12,15 @@ if vim.g.neovide then
   vim.keymap.set('i', '<D-v>', '<ESC>l"+Pli') -- Paste insert mode
 end
 
+-- Keymap for aerial
+vim.keymap.set("n", "<leader>a", "<cmd>AerialToggle!<CR>")
+
+-- Turn off virtual text (LSP) 
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+  vim.lsp.diagnostic.on_publish_diagnostics, {
+    virtual_text = false,
+  }
+)
 
 return {
   -- Configure AstroNvim updates
