@@ -76,8 +76,17 @@ return {
     "stevanmilic/nvim-lspimport",
     event = "VeryLazy",
     config = function ()
-      vim.keymap.set("n", "<leader>a", require("lspimport").import, { noremap = true })
+      vim.keymap.set("n", "<leader>fi", require("lspimport").import, { noremap = true })
     end
-  }
-  
+  },
+
+  {
+    'stevearc/aerial.nvim',
+    opts = {},
+    config = function ()
+      require("aerial").setup()
+      -- You probably also want to set a keymap to toggle aerial
+      vim.keymap.set("n", "<leader>m", "<cmd>AerialToggle!<CR>")
+    end
+  },
 }
