@@ -32,9 +32,21 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    ["<D-v>"] = {'"+P', desc = "Paste"},
   },
   t = {
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
+    ["<D-v>"] = {'<C-\\><C-o>"+p', desc = "Paste"},
   },
+  v = {
+    ["<D-c>"] = {'"+y', desc = "Copy"},
+    ["<D-v>"] = {'"+P', desc = "Paste"},
+  },
+  c = {
+    ["<D-v>"] = {'<C-R>+', desc = "Paste"},
+  },
+  i = {
+    ["<D-v>"] = {'<ESC>"+Pa', desc = "Paste"},
+  }
 }
