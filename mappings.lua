@@ -33,6 +33,15 @@ return {
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
     ["<D-v>"] = {'"+P', desc = "Paste"},
+    ["U"] = {"<C-r>", desc = "Redo"},
+    ["<D-z>"] = {"u", desc = "Undo"},
+    ["<D-Z>"] = {"<C-r>", desc = "Redo"},
+
+    -- window management
+    ["<leader>sv"] = {"<C-w>v", desc = "split window vertically"},
+    ["<leader>sh"] = {"<C-w>s", desc = "split window horizontally"},
+    ["<leader>se"] = {"<C-w>=", desc = "make split windows equal width & height"},
+    ["<leader>sx"] = {":close<CR>", desc = "close current split window"},
   },
   t = {
     -- setting a mapping to false will disable it
@@ -47,6 +56,8 @@ return {
     ["<D-v>"] = {'<C-R>+', desc = "Paste"},
   },
   i = {
-    ["<D-v>"] = {'<ESC>"+Pa', desc = "Paste"},
+    ["<D-v>"] = {'<C-r>+', desc = "paste"},
+    ["<D-z>"] = {"<Esc>ui", desc = "Undo"},
+    ["<D-Z>"] = {"<Esc><C-r>i", desc = "Redo"},
   }
 }
