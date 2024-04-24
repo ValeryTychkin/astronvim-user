@@ -35,6 +35,7 @@ return {
 
   {
     "petertriho/nvim-scrollbar",
+    event = "User AstroFile",
     opts = function(_, opts)
       require("astrocore").extend_tbl(opts, {
         handlers = {
@@ -44,8 +45,9 @@ return {
         },
       })
     end,
-    event = "User AstroFile",
     config = function ()
+      require("scrollbar.handlers.gitsigns").setup()
+
       require("scrollbar").setup({
             handle = {
             color = "#2E323C",
@@ -59,7 +61,7 @@ return {
             Misc = { color = "#FFFFFF" },
           }
       })
-    end
+    end,
   },
 
   "nvimdev/zephyr-nvim",
