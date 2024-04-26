@@ -56,7 +56,7 @@ return {
     ["<D-v>"] = {'<C-R>+', desc = "Paste"},
   },
   i = {
-    ["<D-v>"] = {'<C-r>+', desc = "paste"},
+    ["<D-v>"] = {'<C-r><C-o>+', desc = "paste"},
     ["<D-z>"] = {"<Esc>ui", desc = "Undo"},
     ["<D-Z>"] = {"<Esc><C-r>i", desc = "Redo"},
   }
