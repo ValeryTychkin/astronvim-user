@@ -42,6 +42,7 @@ return {
     ["<leader>sh"] = {"<C-w>s", desc = "split window horizontally"},
     ["<leader>se"] = {"<C-w>=", desc = "make split windows equal width & height"},
     ["<leader>sx"] = {":close<CR>", desc = "close current split window"},
+    ["dd"] = {'"_dd', desc = "Delete without save in buffer"}
   },
   t = {
     -- setting a mapping to false will disable it
@@ -51,6 +52,7 @@ return {
   v = {
     ["<D-c>"] = {'"+y', desc = "Copy"},
     ["<D-v>"] = {'"+P', desc = "Paste"},
+    ["d"] = {'"_d', desc = "Delete without save in buffer"}
   },
   c = {
     ["<D-v>"] = {'<C-R>+', desc = "Paste"},
